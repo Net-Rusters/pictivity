@@ -1,10 +1,9 @@
 use ::image::{ImageBuffer, RgbImage, DynamicImage};
 use std::f64::consts::{E, PI};
 
-pub fn gaussian_blur(img: DynamicImage, filter_dim: u8){
+pub fn gaussian_blur(img: DynamicImage, filter_dim: u32, sigma: f64){
     let rgbimg: RgbImage = img.into_rgb();
     let mut filter = vec!();
-    let sigma: f64 = 50.0; 
     let mut sum: f64 = 0.0;
     for i in 0..filter_dim {
         let mut filter_row = vec!();

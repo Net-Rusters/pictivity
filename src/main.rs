@@ -4,6 +4,6 @@ mod blur;
 use blur::gaussian::gaussian_blur;
 
 fn main() {
-    let img = open("./t.png").unwrap();
-    gaussian_blur(img, 5);
+    let img = open("./pika.png").unwrap();
+    gaussian_blur(img, 5, 5.0);
 }
