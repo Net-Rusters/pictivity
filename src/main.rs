@@ -5,5 +5,5 @@ use blur::gaussian::gaussian_blur;
 
 fn main() {
     let img = open("./t.png").unwrap();
-    gaussian_blur(img, 25);
+    gaussian_blur(img, 5);
 }
